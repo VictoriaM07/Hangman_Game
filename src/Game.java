@@ -7,7 +7,6 @@ public class Game {
         // 4. Cere litera de la user
         // 5. Daca litera se regasete se inlocuieste fiecare steluta cu acea litera de la acelasi index
 
-
-
+        System.out.println(">>>>>> Welcome to Hangman game! <<<<<<");
     }
 }
