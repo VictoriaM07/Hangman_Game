@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Game {
     public static void main(String[] args) {
 
@@ -9,5 +11,14 @@ public class Game {
 
         System.out.println(">>>>>> Welcome to Hangman game! <<<<<<");
         String word = "airplane";
+        int wordLength = word.length();
+        char[] stars = new char[wordLength];
+
+//        for (int i = 0; i < stars.length; i++) {
+//            stars[i] = '*';
+//        }
+
+        Arrays.fill(stars,'*');
+        System.out.print(stars);
     }
 }
