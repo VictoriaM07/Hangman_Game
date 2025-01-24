@@ -14,7 +14,7 @@ public class Game {
 
         System.out.println(">>>>>> Welcome to Hangman game! <<<<<<");
         Scanner sc = new Scanner(System.in);
-        String word = "airplane";
+        String word = "dog";
         int wordLength = word.length();
         char[] stars = new char[wordLength];
 
@@ -28,12 +28,18 @@ public class Game {
         while (true) {
             System.out.print("Enter a letter: ");
             char guessedLetter = sc.next().charAt(0);
+
             for (int i = 0; i < wordLength; i++) {
                 if (word.charAt(i) == guessedLetter) {
                     stars[i] = guessedLetter;
                 }
             }
             System.out.println(stars);
+
+            if (!String.valueOf(stars).contains("*")) {
+                System.out.println("Congrats");
+                break;
+            }
         }
     }
 }
