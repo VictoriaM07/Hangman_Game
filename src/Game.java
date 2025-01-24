@@ -22,15 +22,18 @@ public class Game {
 //            stars[i] = '*';
 //        }
 
-        Arrays.fill(stars,'*');
+        Arrays.fill(stars, '*');
         System.out.println(stars);
-        System.out.print("Enter a letter: ");
-        char guessedLetter = sc.next().charAt(0);
-        for (int i = 0; i < wordLength; i++) {
-            if(word.charAt(i)==guessedLetter){
-                stars[i] = guessedLetter;
+
+        while (true) {
+            System.out.print("Enter a letter: ");
+            char guessedLetter = sc.next().charAt(0);
+            for (int i = 0; i < wordLength; i++) {
+                if (word.charAt(i) == guessedLetter) {
+                    stars[i] = guessedLetter;
+                }
             }
+            System.out.println(stars);
         }
-        System.out.println(stars);
     }
 }
