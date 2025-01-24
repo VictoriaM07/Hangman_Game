@@ -9,6 +9,8 @@ public class Game {
         // 3. Afiseaza nr stelute = numar caractere
         // 4. Cere litera de la user
         // 5. Daca litera se regasete se inlocuieste fiecare steluta cu acea litera de la acelasi index
+        // 6. Repeta la infinit cererea si validarea literei
+        // 7. Opreste repetitia cand cuvantul este complet
 
         System.out.println(">>>>>> Welcome to Hangman game! <<<<<<");
         Scanner sc = new Scanner(System.in);
