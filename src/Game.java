@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Game {
@@ -18,7 +20,11 @@ public class Game {
 
         System.out.println(">>>>>> Welcome to Hangman game! <<<<<<");
         Scanner sc = new Scanner(System.in);
-        String word = "dog";
+        ArrayList<String> randomWords = new ArrayList<>(Arrays.asList("consumer", "anxiety", "explicit",
+                "entitlement", "dissapointment", "mechanical", "calendar", "nuclear", "therapist", "finance",
+                "automation", "landscape"));
+        Random rnd = new Random();
+        String word = randomWords.get(rnd.nextInt(randomWords.size()));
         word = word.toLowerCase();
         int wordLength = word.length();
         char[] stars = new char[wordLength];
