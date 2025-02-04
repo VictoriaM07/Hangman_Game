@@ -19,6 +19,7 @@ public class Game {
         System.out.println(">>>>>> Welcome to Hangman game! <<<<<<");
         Scanner sc = new Scanner(System.in);
         String word = "dog";
+        word = word.toLowerCase();
         int wordLength = word.length();
         char[] stars = new char[wordLength];
 
@@ -29,9 +30,10 @@ public class Game {
         Arrays.fill(stars, '*');
         System.out.println(stars);
 
-        while (String.valueOf(stars).contains("*")) {
+        while (true) {
             System.out.print("Enter a letter: ");
             char guessedLetter = sc.next().charAt(0);
+            guessedLetter = Character.toLowerCase(guessedLetter);
 
             for (int i = 0; i < wordLength; i++) {
                 if (word.charAt(i) == guessedLetter) {
