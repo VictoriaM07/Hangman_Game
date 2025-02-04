@@ -11,6 +11,10 @@ public class Game {
         // 5. Daca litera se regasete se inlocuieste fiecare steluta cu acea litera de la acelasi index
         // 6. Repeta la infinit cererea si validarea literei
         // 7. Opreste repetitia cand cuvantul este complet
+        // 8. Valideaza si literele mari
+        // 9. Adauga un numar maxim de incercari gresite
+        // 10. Adauga conditie "Ai pierdut"
+        // 11. Transforma cuvantul initial intr-un cuvant necunoscut
 
         System.out.println(">>>>>> Welcome to Hangman game! <<<<<<");
         Scanner sc = new Scanner(System.in);
@@ -25,7 +29,7 @@ public class Game {
         Arrays.fill(stars, '*');
         System.out.println(stars);
 
-        while (true) {
+        while (String.valueOf(stars).contains("*")) {
             System.out.print("Enter a letter: ");
             char guessedLetter = sc.next().charAt(0);
 
